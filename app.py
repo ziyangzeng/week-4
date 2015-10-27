@@ -36,7 +36,7 @@ def getData():
 
 	# TRY TO SEND BACK OTHER MESSAGES FROM THE SERVER. 
 	# MAKE SURE THE MESSAGES ARE BEING DISPLAYED ON THE FRONT END.
-	q.put("starting data query...")
+	q.put("Generating data...")
 
 	lat1 = str(request.args.get('lat1'))
 	lng1 = str(request.args.get('lng1'))
@@ -46,8 +46,8 @@ def getData():
 	print "received coordinates: [" + lat1 + ", " + lat2 + "], [" + lng1 + ", " + lng2 + "]"
 	
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "password")
-	db_name = "property_test"
+	session_id = client.connect("root", "110891")
+	db_name = "soufun"
 	db_username = "admin"
 	db_password = "admin"
 
